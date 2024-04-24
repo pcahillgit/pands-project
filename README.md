@@ -1,5 +1,7 @@
 # Programming and Scripting Project
 
+![Van Goghs Irises](https://upload.wikimedia.org/wikipedia/commons/9/98/VanGoghIrises2.jpg)
+
 ## About This Repository
 This repository contains my submission for the Programming and Scripting Project. This repository is an anlysis of the classic [Iris Dataset](https://archive.ics.uci.edu/dataset/53/iris).
 
@@ -10,7 +12,7 @@ The Iris Dataset is taken from Ronald Fisher's 1936 paper *The Use of Multiple M
 
 The three speces of Iris studied in Fisher's dataset are:
 
-- Iris Setosa 
+- Iris Setosa
 - Iris Virginica
 - Iris Versicolor
 
@@ -22,7 +24,7 @@ These species are broken down by the following attributes:
 - Petal width (cm)
 - Species
 
-All of the Iris's were picked in the Gaspé Peninsula (near Quebec City, Canada) on the same day.
+All of the Irises were picked in the Gaspé Peninsula (near Quebec City, Canada) on the same day.
 
 # What Makes this Dataset so Special?
 Aside from being published by an already established and successful statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons:
