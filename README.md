@@ -26,7 +26,7 @@ These species are broken down by the following attributes:
 
 All of the Irises were picked in the Gaspé Peninsula (near Quebec City, Canada) on the same day.
 
-# What Makes this Dataset so Special?
+## What Makes this Dataset so Special?
 Aside from being published by an already established and successful statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons:
 
 the dataset is easily accessible for beginners; it has an easily recognizable and contextualised subject matter (flowers) and, in examining those flowers, contains relatively few variables.
@@ -45,7 +45,7 @@ Anaconda will pre-install Python along with the libraries used within this noteb
 
 ## References
 | Author | Title | About |
-| :---   | :---: |  ---: |
+| :---   | :---: | :---: |
 | Fisher, Ronald | "The Use of Multiple Measurements in Taxonomic Problems", Annals of Eugenics, 7(2): 179–188 | Fishers original paper. The dataset is available [here](https://archive.ics.uci.edu/dataset/53/iris). |
 | Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses* |
 
