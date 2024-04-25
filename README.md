@@ -8,7 +8,7 @@ This repository contains my submission for the Programming and Scripting Project
 My analysis aims to demonstrate some key programming, scripting and data analytics techniques such as researching and importing a dataset, examining its variables and plotting them in a variety of ways.
 
 ## About the Iris Dataset
-The Iris Dataset is taken from Ronald Fisher's 1936 paper *The Use of Multiple Measurements in Taxonomic Problems*. It outlines the physical attributes of 150 flowers, comprised of three related Iris species (50 instances of each).
+The Iris Dataset is taken from Ronald Fisher's 1936 paper *The Use of Multiple Measurements in Taxonomic Problems*. It outlines the physical attributes of 150 flowers, comprised of three related Iris species (Fifty instances of each).
 
 The three speces of Iris studied in Fisher's dataset are:
 
@@ -22,21 +22,17 @@ These species are broken down by the following attributes:
 - Sepal width (cm)
 - Petal length (cm)
 - Petal width (cm)
-- Species
 
-All of the Irises were picked in the Gaspé Peninsula (near Quebec City, Canada) on the same day.
+All of the Irises were picked in the Gaspé Peninsula (near Quebec City, Canada) under the same conditions (on the same day, by the same person).
 
 ## What Makes this Dataset so Special?
-Aside from being published by an already established and successful statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons:
+Aside from being published by an already established and successful (albeit controversial) statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons.
 
-the dataset is easily accessible for beginners; it has an easily recognizable and contextualised subject matter (flowers) and, in examining those flowers, contains relatively few variables.
+The Iris dataset is easily accessible for beginners; it has an easily contextualised subject matter (flowers) and examines those flowers in relatively few variables, using the same unit of meaurement for each (centimetres). Further, the data is evenly spread amongst three species (fifty instances of each), with no missing data- this means it doesn't require tidying before analysis and each of the three species of flower can be compared to one another using the same count of instances.
 
-Further, the data is evenly spread amongst three species (50 flowers of each), with no missing data to tidy.
+Although the dats is straight forward, scientists and data analysists can use it to test and utilise a wide range of statistical analysis and machine learning techniques. Judging from a quick review of the literature surounding the dataset, this analysis can range from those dipping their toes into coding, statistics and data analysis to those blazing the trail.
 
-Although the dats is straight forward, scientists and data analysists can use it to test and utilise a wide range of statistical analysis and machine learning techniques.
-
-80+ years later we're still using the Iris dataset to play around with statistics, machine learning and data analysis, now it's just a few clicks away from anyone with internet access.
-
+There's good reason it's still in use 80+ years after those flowers were plucked.
 
 ## Get Started
 I used [Anaconda](https://www.anaconda.com/download) in [Visual Studio Code](https://code.visualstudio.com/download) to create and create this project and recommend you download and use the same to view the work.
