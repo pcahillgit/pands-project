@@ -8,7 +8,7 @@ This repository contains my submission for the Programming and Scripting Project
 My analysis aims to demonstrate some key programming, scripting and data analytics techniques such as researching and importing a dataset, examining its variables and plotting them in a variety of ways.
 
 ## About the Iris Dataset
-The Iris Dataset is taken from Ronald Fisher's 1936 paper *The Use of Multiple Measurements in Taxonomic Problems*. It outlines the physical attributes of 150 flowers, comprised of three related Iris species (Fifty instances of each).
+The Iris Dataset is taken from Ronald Fisher's 1936 paper *The Use of Multiple Measurements in Taxonomic Problems*. The study is an example of taxonomy, or the classification of living things. In the paper, Fisher outlines the physical attributes of 150 flowers, comprised of three related Iris species (fifty instances of each).
 
 The three speces of Iris studied in Fisher's dataset are:
 
@@ -38,6 +38,8 @@ There's good reason it's still in use 80+ years after those flowers were plucked
 I used [Anaconda](https://www.anaconda.com/download) in [Visual Studio Code](https://code.visualstudio.com/download) to create and create this project and recommend you download and use the same to view the work.
 
 Anaconda will pre-install Python along with the libraries used within this notebook. Visual Studio Code is a tool which allows the user to view and edit code.
+
+My work is structured 
 
 ## References
 | Author | Title | About |
