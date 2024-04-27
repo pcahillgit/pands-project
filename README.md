@@ -39,13 +39,19 @@ I used [Anaconda](https://www.anaconda.com/download) in [Visual Studio Code](htt
 
 Anaconda will pre-install Python along with the libraries used within this notebook. Visual Studio Code is a tool which allows the user to view and edit code.
 
-My work is structured 
+My repository is structured as follows:
+
+- This README which provides information on the Iris dataset and lists the references.
+- The iris.data file which contains the raw Iris data, this is imported in my code.
+- The analysis.py file which contains code used to analyse the dataset.
+- All other files are products of that analysis; summaries of the variables and plots.
 
 ## References
 | Author | Title | About |
 | :---   | :---: | :---: |
 | Fisher, Ronald | "The Use of Multiple Measurements in Taxonomic Problems", Annals of Eugenics, 7(2): 179–188 | Fishers original paper. The dataset is available [here](https://archive.ics.uci.edu/dataset/53/iris). |
 | Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses* |
+| Pandas Documentation | [*10 Minutes to Pandas Guide*](https://pandas.pydata.org/docs/user_guide/10min.html) | Importing pandas, using it to import the dataset, etc. |
 
 
 ## Author

@@ -12,8 +12,16 @@ print(df)
 columns = ['sepal length (cm)','sepal width (cm)','petal length (cm)','petal width (cm)','class']
 df.columns = columns
 
-# Checking the types of data held in the dataset
-print("Types of data:", df.dtypes)
+# summarising the variables:
+
+# checking the types of data held in the dataset
+print("Types of data:\n", df.dtypes)
 
 # summary of data
 print (df.describe())
+
+# histograms:
+
+# scatter Plots:
+
+# additional Analysis:
