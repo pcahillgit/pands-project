@@ -25,14 +25,12 @@ These species are broken down by the following attributes:
 
 All of the Irises were picked in the Gaspé Peninsula (near Quebec City, Canada) under the same conditions (on the same day, by the same person).
 
-## What Makes this Dataset so Special?
-Aside from being published by an already established and successful (albeit controversial) statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons.
+## What Makes This Particular Dataset so Special?
+Aside from being published by an already established and successful (albeit controversial) statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons, explaining why it's still in use 80+ years after those 150 flowers were plucked.
 
 The Iris dataset is easily accessible for beginners; it has an easily contextualised subject matter (flowers) and examines those flowers in relatively few variables, using the same unit of meaurement for each (centimetres). Further, the data is evenly spread amongst three species (fifty instances of each), with no missing data- this means it doesn't require tidying before analysis and each of the three species of flower can be compared to one another using the same count of instances.
 
 Although the dats is straight forward, scientists and data analysists can use it to test and utilise a wide range of statistical analysis and machine learning techniques. Judging from a quick review of the literature surounding the dataset, this analysis can range from those dipping their toes into coding, statistics and data analysis to those blazing the trail.
-
-There's good reason it's still in use 80+ years after those flowers were plucked.
 
 ## Get Started
 I used [Anaconda](https://www.anaconda.com/download) in [Visual Studio Code](https://code.visualstudio.com/download) to create and create this project and recommend you download and use the same to view the work.
@@ -52,6 +50,7 @@ My repository is structured as follows:
 | Fisher, Ronald | "The Use of Multiple Measurements in Taxonomic Problems", Annals of Eugenics, 7(2): 179–188 | Fishers original paper. The dataset is available [here](https://archive.ics.uci.edu/dataset/53/iris). |
 | Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses* |
 | Pandas Documentation | [*10 Minutes to Pandas Guide*](https://pandas.pydata.org/docs/user_guide/10min.html) | Importing pandas, using it to import the dataset, etc. |
+| Solomon, Brad. Real Python | [*Python Plotting with Matplotlib (Guide)*](https://realpython.com/python-matplotlib-guide/) | Lots of useful information on plotting, additional resources are available at the end of the article. |
 
 
 ## Author
