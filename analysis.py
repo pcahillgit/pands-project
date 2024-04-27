@@ -16,12 +16,19 @@ columns = ['sepal length (cm)','sepal width (cm)','petal length (cm)','petal wid
 df.columns = columns
 
 # Summarising the variables:
+# Displaying the dataframe (first three values)
+print("First three rows of the dataset:\n", df.head(3))
+
 # Checking the types of data held in the dataset
-print("Types of data:\n", df.dtypes)
+print("\n\nTypes of data:\n", df.dtypes)
 
-# Summary of data
-print (df.describe())
+# Showing the unique class (species) values
+print("\n\nListing unique class variables (species of iris):\n",df['class'].unique())
 
+# Summary of numerical data (these show as type float64, they are floating point numbers (stored using 64 bits)- in this case it's the physical dimensions of the iris)
+print("\n\nSummary of numerical data:\n", df.describe())
+
+'''
 # Saving the output of the summaries as a text file
 # Opening a file called summary.txt in write mode ("w") and attributing it to the variable text_file, then filling the file with the summary statistics above as strings.
 with open("summary.txt", "w") as text_file:
@@ -29,7 +36,7 @@ with open("summary.txt", "w") as text_file:
     text_file.write(df.dtypes.to_string())
     text_file.write("\n\nSummary of data:\n")
     text_file.write(df.describe().to_string())
-
+'''
 '''
 # Histograms:
 #
