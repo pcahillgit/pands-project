@@ -1,18 +1,23 @@
 # pands project
 # This is the script which contains all my code used to produce my analysis of Fisher's Iris dataset.
-# I start off by importing the dataset and defining the columns, then I produce some summary statistics, followed by plots and finish with some additional analysis.
+# I start off by importing the dataset and defining the columns, then I produce some summary statistics
+# followed by plots (histograms (one for each variable), then scatterplots (one for each pair of variables)) and finish with some additional analysis.
 # The outputs of this code are saved in the repository.
 # Author: Paul Cahill
 
-###
+### LIBRARIES ###
 
 # Libraries:
 # Data frames
 import pandas as pd
+
 # Plotting
 import matplotlib.pyplot as plt
 
-###
+# Plotting Scatterplot
+import seaborn as sns
+
+### IMPORTING DATASET ###
 
 # Importing the dataset
 df = pd.read_csv("iris.data")
@@ -22,7 +27,7 @@ print(df)
 columns = ['sepal length (cm)','sepal width (cm)','petal length (cm)','petal width (cm)','class']
 df.columns = columns
 
-###
+### VARIABLE SUMMARIES ###
 
 '''
 
@@ -50,11 +55,9 @@ with open("summary.txt", "w") as text_file:
     text_file.write("\n\nListing unique class variables (species of iris):\n")
     text_file.write("\n\nSummary of numerical data:\n")
     text_file.write(df.describe().to_string())
-'''
 
-###
+### HISTOGRAMS ###
 
-'''
 # Histograms:
 
 # Sepal Length
@@ -79,7 +82,7 @@ plt.title('Histogram of Iris Sepal Length (by Species)')
 plt.legend()
 
 # Saving plot as a PNG
-plt.savefig('Histogram of Iris Sepal Length (by Species)')
+plt.savefig('histogram of Iris Sepal Length (by Species)'.png)
 
 # Sepal Width
 # Filtering the dataset by class
@@ -103,7 +106,7 @@ plt.title('Histogram of Iris Sepal Width (by Species)')
 plt.legend()
 
 # Saving plot as a PNG
-plt.savefig('Histogram of Iris Sepal Width (by Species)')
+plt.savefig('histogram of Iris Sepal Width (by Species)'.png)
 
 # Petal Length
 # Filtering the dataset by class
@@ -127,7 +130,7 @@ plt.title('Histogram of Iris Petal Length (by Species)')
 plt.legend()
 
 # Saving plot as a PNG
-plt.savefig('Histogram of Iris Petal Length (by Species)')
+plt.savefig('histogram of Iris Petal Length (by Species).png')
 
 # Petal Width
 # Filtering the dataset by class
@@ -151,12 +154,23 @@ plt.title('Histogram of Iris Petal Width (by Species)')
 plt.legend()
 
 # Saving plot as a PNG
-plt.savefig('Histogram of Iris Petal Width (by Species)')
+plt.savefig('histogram of Iris Petal Width (by Species).png')
+
+### SCATTERPLOTS ###
+
+# As opposed to creating 6 individual scatterplots I created a pairplot using seaborn.
+# As opposed to plotting histograms in this pairplot, as these have already been produced, I chose to use kernal density estimates.
+
+# Creating the pairplot using the dataframe, setting the diagonal boxes as kernal density estimates
+sns.pairplot(df, diag_kind = 'kde')
+# Saving the figure as a PNG
+plt.savefig('pairplots.png')
 
 '''
 
-# Scatter Plots:
-#
+### ADDITIONAL ANALYSIS ###
 
 # Additional Analysis:
 #
+
+### END ###
