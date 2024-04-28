@@ -51,8 +51,10 @@ with open("summary.txt", "w") as text_file:
     text_file.write("\n\nSummary of numerical data:\n")
     text_file.write(df.describe().to_string())
 '''
+
 ###
 
+'''
 # Histograms:
 
 # Sepal Length
@@ -68,7 +70,7 @@ plt.hist(virginica_sepallength, bins=9, color='violet', alpha=0.8, label='Virgin
 
 # Axis labels
 plt.xlabel('Sepal Length (cm)')
-plt.ylabel('Number of Ireses')
+plt.ylabel('Frequency')
 
 # Title
 plt.title('Histogram of Iris Sepal Length (by Species)')
@@ -76,8 +78,8 @@ plt.title('Histogram of Iris Sepal Length (by Species)')
 # Legend
 plt.legend()
 
-# Displaying plot
-plt.show()
+# Saving plot as a PNG
+plt.savefig('Histogram of Iris Sepal Length (by Species)')
 
 # Sepal Width
 # Filtering the dataset by class
@@ -92,7 +94,7 @@ plt.hist(virginica_sepalwidth, bins=9, color='violet', alpha=0.8, label='Virgini
 
 # Axis labels
 plt.xlabel('Sepal Width (cm)')
-plt.ylabel('Number of Irises')
+plt.ylabel('Frequency')
 
 # Title
 plt.title('Histogram of Iris Sepal Width (by Species)')
@@ -100,8 +102,8 @@ plt.title('Histogram of Iris Sepal Width (by Species)')
 # Legend
 plt.legend()
 
-# Displaying plot
-plt.show()
+# Saving plot as a PNG
+plt.savefig('Histogram of Iris Sepal Width (by Species)')
 
 # Petal Length
 # Filtering the dataset by class
@@ -116,7 +118,7 @@ plt.hist(virginica_petallength, bins=9, color='violet', alpha=0.8, label='Virgin
 
 # Axis labels
 plt.xlabel('Petal Length (cm)')
-plt.ylabel('Number of Irises')
+plt.ylabel('Frequency')
 
 # Title
 plt.title('Histogram of Iris Petal Length (by Species)')
@@ -124,8 +126,8 @@ plt.title('Histogram of Iris Petal Length (by Species)')
 # Legend
 plt.legend()
 
-# Displaying plot
-plt.show()
+# Saving plot as a PNG
+plt.savefig('Histogram of Iris Petal Length (by Species)')
 
 # Petal Width
 # Filtering the dataset by class
@@ -140,7 +142,7 @@ plt.hist(virginica_petalwidth, bins=9, color='violet', alpha=0.8, label='Virgini
 
 # Axis labels
 plt.xlabel('Petal Width (cm)')
-plt.ylabel('Number of Irises')
+plt.ylabel('Frequency')
 
 # Title
 plt.title('Histogram of Iris Petal Width (by Species)')
@@ -148,10 +150,8 @@ plt.title('Histogram of Iris Petal Width (by Species)')
 # Legend
 plt.legend()
 
-# Displaying plot
-plt.show()
-
-###
+# Saving plot as a PNG
+plt.savefig('Histogram of Iris Petal Width (by Species)')
 
 '''
 
@@ -160,5 +160,3 @@ plt.show()
 
 # Additional Analysis:
 #
-
-'''

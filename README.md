@@ -48,7 +48,7 @@ My repository is structured as follows:
 | Author | Title | About |
 | :---   | :---: | :---: |
 | Fisher, Ronald | "The Use of Multiple Measurements in Taxonomic Problems", Annals of Eugenics, 7(2): 179–188 | Fishers original paper. The dataset is available [here](https://archive.ics.uci.edu/dataset/53/iris). |
-| Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses* |
+| Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses*. |
 | Pandas Documentation | [*10 Minutes to Pandas Guide*](https://pandas.pydata.org/docs/user_guide/10min.html) | Importing pandas, using it to import the dataset, etc. |
 | Solomon, Brad. Real Python | [*Python Plotting with Matplotlib (Guide)*](https://realpython.com/python-matplotlib-guide/) | Lots of useful information on plotting, additional resources are available at the end of the article. |
 | W3 Schools | [*Matplotlib Tutorials*](https://www.w3schools.com/python/matplotlib_intro.asp) | Another useful one for plotting. I used this to see how I could enhance my plots visually by adding titles, legends, etc. |
