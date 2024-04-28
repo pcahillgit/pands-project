@@ -67,9 +67,9 @@ versicolor_sepallength = df[df['class'] == 'Iris-versicolor']['sepal length (cm)
 virginica_sepallength = df[df['class'] == 'Iris-virginica']['sepal length (cm)']
 
 # Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_sepallength, bins=9, color='purple', alpha=0.8, label='Setosa')
-plt.hist(versicolor_sepallength, bins=9, color='indigo', alpha=0.8, label='Versicolor')
-plt.hist(virginica_sepallength, bins=9, color='violet', alpha=0.8, label='Virginica')
+plt.hist(setosa_sepallength, bins=9, color='blue', alpha=0.8, label='Setosa')
+plt.hist(versicolor_sepallength, bins=9, color='orange', alpha=0.8, label='Versicolor')
+plt.hist(virginica_sepallength, bins=9, color='green', alpha=0.8, label='Virginica')
 
 # Axis labels
 plt.xlabel('Sepal Length (cm)')
@@ -91,9 +91,9 @@ versicolor_sepalwidth = df[df['class'] == 'Iris-versicolor']['sepal width (cm)']
 virginica_sepalwidth = df[df['class'] == 'Iris-virginica']['sepal width (cm)']
 
 # Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_sepalwidth, bins=9, color='purple', alpha=0.8, label='Setosa')
-plt.hist(versicolor_sepalwidth, bins=9, color='indigo', alpha=0.8, label='Versicolor')
-plt.hist(virginica_sepalwidth, bins=9, color='violet', alpha=0.8, label='Virginica')
+plt.hist(setosa_sepalwidth, bins=9, color='blue', alpha=0.8, label='Setosa')
+plt.hist(versicolor_sepalwidth, bins=9, color='orange', alpha=0.8, label='Versicolor')
+plt.hist(virginica_sepalwidth, bins=9, color='green', alpha=0.8, label='Virginica')
 
 # Axis labels
 plt.xlabel('Sepal Width (cm)')
@@ -115,9 +115,9 @@ versicolor_petallength = df[df['class'] == 'Iris-versicolor']['petal length (cm)
 virginica_petallength = df[df['class'] == 'Iris-virginica']['petal length (cm)']
 
 # Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_petallength, bins=9, color='purple', alpha=0.8, label='Setosa')
-plt.hist(versicolor_petallength, bins=9, color='indigo', alpha=0.8, label='Versicolor')
-plt.hist(virginica_petallength, bins=9, color='violet', alpha=0.8, label='Virginica')
+plt.hist(setosa_petallength, bins=9, color='blue', alpha=0.8, label='Setosa')
+plt.hist(versicolor_petallength, bins=9, color='orange', alpha=0.8, label='Versicolor')
+plt.hist(virginica_petallength, bins=9, color='green', alpha=0.8, label='Virginica')
 
 # Axis labels
 plt.xlabel('Petal Length (cm)')
@@ -139,9 +139,9 @@ versicolor_petalwidth = df[df['class'] == 'Iris-versicolor']['petal width (cm)']
 virginica_petalwidth = df[df['class'] == 'Iris-virginica']['petal width (cm)']
 
 # Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_petalwidth, bins=9, color='purple', alpha=0.8, label='Setosa')
-plt.hist(versicolor_petalwidth, bins=9, color='indigo', alpha=0.8, label='Versicolor')
-plt.hist(virginica_petalwidth, bins=9, color='violet', alpha=0.8, label='Virginica')
+plt.hist(setosa_petalwidth, bins=9, color='blue', alpha=0.8, label='Setosa')
+plt.hist(versicolor_petalwidth, bins=9, color='orange', alpha=0.8, label='Versicolor')
+plt.hist(virginica_petalwidth, bins=9, color='green', alpha=0.8, label='Virginica')
 
 # Axis labels
 plt.xlabel('Petal Width (cm)')
@@ -161,8 +161,10 @@ plt.savefig('histogram of Iris Petal Width (by Species).png')
 # As opposed to creating 6 individual scatterplots I created a pairplot using seaborn.
 # As opposed to plotting histograms in this pairplot, as these have already been produced, I chose to use kernal density estimates.
 
-# Creating the pairplot using the dataframe, setting the diagonal boxes as kernal density estimates
-sns.pairplot(df, diag_kind = 'kde')
+# Creating the pairplot using the dataframe, setting the diagonal boxes as kernal density estimates,
+# highlighting species by setting hue as class, coloring the classes in easy to distinguish palette.
+sns.pairplot(df, diag_kind = 'kde', hue = 'class', palette = 'colorblind')
+
 # Saving the figure as a PNG
 plt.savefig('pairplots.png')
 

@@ -50,7 +50,8 @@ My repository is structured as follows:
 | Fisher, Ronald | "The Use of Multiple Measurements in Taxonomic Problems", Annals of Eugenics, 7(2): 179–188 | Fishers original paper. The dataset is available [here](https://archive.ics.uci.edu/dataset/53/iris). |
 | GitHub Docs | [*Basic writing and formatting syntax: Create sophisticated formatting for your prose and code on GitHub with simple syntax*](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | Useful guide for basic markdown; stylising text, making lists, adding images, etc. |
 | Pandas Documentation | [*10 Minutes to Pandas Guide*](https://pandas.pydata.org/docs/user_guide/10min.html) | Importing pandas, using it to import the dataset, etc. |
-| Seaborn Guides | [*seaborn.kdeplot*](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) | Kernal density estimations with Seaborn, explanations and guides. |
+| Seaborn Guides | [*seaborn.kdeplot*](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) | Kernal density estimations with seaborn, explanations and guides. |
+| Seaborn Guides | [*seaborn.pairplot*](https://seaborn.pydata.org/generated/seaborn.pairplot.html) | Pairplots with seaborn, how to edit the various parameters of the plot |
 | Solomon, Brad. Real Python | [*Python Plotting with Matplotlib (Guide)*](https://realpython.com/python-matplotlib-guide/) | Lots of useful information on plotting, additional resources are available at the end of the article. |
 | Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses*. |
 | W3 Schools | [*Matplotlib Tutorials*](https://www.w3schools.com/python/matplotlib_intro.asp) | Another useful one for plotting. I used this to see how I could enhance my plots visually by adding titles, legends, etc. |
