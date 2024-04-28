@@ -26,7 +26,7 @@ These species are broken down by the following attributes:
 All of the Irises were picked in the Gaspé Peninsula (near Quebec City, Canada) under the same conditions (on the same day, by the same person).
 
 ## What Makes This Particular Dataset so Special?
-Aside from being published by an already established and successful (albeit controversial) statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons, explaining why it's still in use 80+ years after those 150 flowers were plucked.
+Aside from being published by an already established and successful statistician, this dataset is renowned across multiple scientific and computing fields in it's own right for a number of reasons, explaining why it's still in use 80+ years after those 150 flowers were plucked.
 
 The Iris dataset is easily accessible for beginners; it has an easily contextualised subject matter (flowers) and examines those flowers in relatively few variables, using the same unit of meaurement for each (centimetres). Further, the data is evenly spread amongst three species (fifty instances of each), with no missing data- this means it doesn't require tidying before analysis and each of the three species of flower can be compared to one another using the same count of instances.
 
@@ -39,10 +39,10 @@ Anaconda will pre-install Python along with the libraries used within this noteb
 
 My repository is structured as follows:
 
-- This README which provides information on the Iris dataset and lists the references.
+- This README which provides information on the Iris dataset and lists the references used to inform my work.
 - The iris.data file which contains the raw Iris data, this is imported in my code.
 - The analysis.py file which contains code used to analyse the dataset.
-- All other files are products of that analysis; summaries of the variables and plots.
+- All other files are products of that analysis; summaries of the variables saved as a text file and plots (histograms and a pairplot) saved as PNG files.
 
 ## References
 | Author | Title | About |
@@ -50,8 +50,8 @@ My repository is structured as follows:
 | Fisher, Ronald | "The Use of Multiple Measurements in Taxonomic Problems", Annals of Eugenics, 7(2): 179–188 | Fishers original paper. The dataset is available [here](https://archive.ics.uci.edu/dataset/53/iris). |
 | GitHub Docs | [*Basic writing and formatting syntax: Create sophisticated formatting for your prose and code on GitHub with simple syntax*](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | Useful guide for basic markdown; stylising text, making lists, adding images, etc. |
 | Pandas Documentation | [*10 Minutes to Pandas Guide*](https://pandas.pydata.org/docs/user_guide/10min.html) | Importing pandas, using it to import the dataset, etc. |
-| Seaborn Guides | [*seaborn.kdeplot*](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) | Kernal density estimations with seaborn, explanations and guides. |
-| Seaborn Guides | [*seaborn.pairplot*](https://seaborn.pydata.org/generated/seaborn.pairplot.html) | Pairplots with seaborn, how to edit the various parameters of the plot |
+| Seaborn | [*seaborn.kdeplot*](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) | Kernal density estimations with seaborn, explanations and guides. |
+| Seaborn | [*seaborn.pairplot*](https://seaborn.pydata.org/generated/seaborn.pairplot.html) | Pairplots with seaborn, how to edit the various parameters of the plot |
 | Solomon, Brad. Real Python | [*Python Plotting with Matplotlib (Guide)*](https://realpython.com/python-matplotlib-guide/) | Lots of useful information on plotting, additional resources are available at the end of the article. |
 | Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses*. |
 | W3 Schools | [*Matplotlib Tutorials*](https://www.w3schools.com/python/matplotlib_intro.asp) | Another useful one for plotting. I used this to see how I could enhance my plots visually by adding titles, legends, etc. |
