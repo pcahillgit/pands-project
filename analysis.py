@@ -1,9 +1,12 @@
 # pands project
 # This is the script which contains all my code used to produce my analysis of Fisher's Iris dataset.
-# I start off by importing the dataset and defining the columns, then I produce some summary statistics
-# followed by plots (histograms (one for each variable), then scatterplots (one for each pair of variables)) and finish with some additional analysis.
-# The outputs of this code are saved in the repository.
 # Author: Paul Cahill
+
+# I start off by importing the dataset and defining the columns,
+# then I produce some summary statistics (first rows of the dataframe, types, unique classes, numerical data summaries),
+# followed by plots: histograms (one for each variable), then a pairplot of the pairs of variables.
+# I then finish with some additional analysis (correlation coefficient, ).
+# The outputs of this code are saved in the repository.
 
 ### LIBRARIES ###
 
@@ -14,7 +17,7 @@ import pandas as pd
 # Plotting
 import matplotlib.pyplot as plt
 
-# Plotting Scatterplot
+# Seaborn for pairplot
 import seaborn as sns
 
 ### IMPORTING DATASET ###
@@ -29,11 +32,9 @@ df.columns = columns
 
 ### VARIABLE SUMMARIES ###
 
-'''
-
 # Summarising the variables:
-# Displaying the dataframe (first three values)
-print("First three rows of the dataset:\n", df.head(3))
+# Displaying the dataframe (first five values)
+print("First five rows of the dataset:\n", df.head(5))
 
 # Checking the types of data held in the dataset
 print("\n\nTypes of data:\n", df.dtypes)
@@ -46,15 +47,20 @@ print("\n\nSummary of numerical data:\n", df.describe())
 
 # Saving the output of the summaries as a text file
 # Opening a file called summary.txt in write mode ("w") and attributing it to the variable text_file, then filling the file with the summary statistics above as strings.
-with open("summary.txt", "w") as text_file:
-    text_file.write("First three rows of the dataset:\n")
-    text_file.write(df.head(3).to_string())
-    text_file.write("\n\nTypes of data:\n")
+# \n here is a line break
+# the join function allows us to take the unique class variables as an array and convert them to a string seperated by commas.
+with open("summary.txt", "w") as text_file: 
+    text_file.write("Summary of the Iris Dataset Variables:\n\n\n")
+    text_file.write("- First Five Rows of the Dataset):\n\n")
+    text_file.write(df.head(5).to_string())
+    text_file.write("\n\n- Types of Data:\n\n")
     text_file.write(df.dtypes.to_string())
-    text_file.write(df['class'].unique().to_string())
-    text_file.write("\n\nListing unique class variables (species of iris):\n")
-    text_file.write("\n\nSummary of numerical data:\n")
+    text_file.write("\n\n- Listing Unique Class Variables (Species of Iris):\n\n")
+    text_file.write(", ".join(df['class'].unique()))
+    text_file.write("\n\n- Summary of Numerical Variables:\n\n")
     text_file.write(df.describe().to_string())
+
+'''  
 
 ### HISTOGRAMS ###
 
@@ -156,10 +162,10 @@ plt.legend()
 # Saving plot as a PNG
 plt.savefig('histogram of Iris Petal Width (by Species).png')
 
-### SCATTERPLOTS ###
+### PAIRPLOT ###
 
 # As opposed to creating 6 individual scatterplots I created a pairplot using seaborn.
-# As opposed to plotting histograms in this pairplot, as these have already been produced, I chose to use kernal density estimates.
+# As opposed to plotting histograms within this pairplot, as these have already been produced, I chose to use kernal density estimates.
 
 # Creating the pairplot using the dataframe, setting the diagonal boxes as kernal density estimates,
 # highlighting species by setting hue as class, coloring the classes in easy to distinguish palette.
@@ -169,10 +175,15 @@ sns.pairplot(df, diag_kind = 'kde', hue = 'class', palette = 'colorblind')
 plt.savefig('pairplots.png')
 
 '''
+'''
 
 ### ADDITIONAL ANALYSIS ###
 
 # Additional Analysis:
-#
+
+# Measuring the correlation
+correlation = np.corrcoef('sepal width (cm)', 'petal length (cm)')
 
 ### END ###
+
+'''
