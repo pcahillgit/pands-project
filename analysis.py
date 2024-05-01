@@ -3,10 +3,14 @@
 # Author: Paul Cahill
 
 # I start off by importing the dataset and defining the columns,
-# then I produce some summary statistics (first rows of the dataframe, types, unique classes, numerical data summaries). When run this will save a .txt file with results
-# followed by plots: histograms (one for each variable), then a pairplot of the pairs of variables. When run this will save two PNG files with figures.
-# I then finish with some additional analysis (examining the correlation coefficient of the pairs of variables). When run this will save a .txt file with results.
+# then I produce some summary statistics (first rows of the dataframe, types, unique classes, numerical data summaries).
+# When run, this will save a .txt file with results
+# This is followed by data visualisations: histograms (one for each variable), then a pairplot (of the pairs of variables).
+# When run this will save two PNG files with figures.
+# I then finish with some additional analysis (examining the correlation coefficient of the pairs of variables).
+# When run this will save a .txt file with results.
 # The outputs of this code are saved in the repository and a summary of what is saved will be printed.
+# Please see the project.ipynb Jupyter Notebook for a brief summary of the outputs.
 
 
 ### LIBRARIES ###
@@ -24,14 +28,11 @@ import seaborn as sns
 # NumPy which I use for correlation coefficients
 import numpy as np
 
-# Numerical arrays
-import pandas as pd
-
 
 ### IMPORTING DATASET ###
 
 
-# Importing the dataset
+# Importing the dataset (from a CSV file) and setting it as df (short for dataframe)
 df = pd.read_csv("iris.data")
 
 # Naming the variables
@@ -45,7 +46,7 @@ labels = ['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width']
 ### VARIABLE SUMMARIES ###
 
 
-# Summarising the variables:
+
 # Displaying the dataframe (first five values)
 df.head(5)
 
@@ -55,7 +56,7 @@ df.dtypes
 # Showing the unique class (species) values
 df['class'].unique()
 
-# Summary of numerical data (these show as type float64, they are floating point numbers (stored using 64 bits)- in this case it's the physical dimensions of the iris)
+# Summary of numerical data (these are the variables which show as type float64, they are floating point numbers (stored using 64 bits)- in this case it's the physical dimensions of the iris)
 df.describe()
 
 # Saving the output of the summaries as a text file
@@ -77,11 +78,11 @@ with open("summary.txt", "w") as text_file:
 ### HISTOGRAMS ### 
 
 
-# Histograms
+
 # Defining unifrom colour scheme for each species
 colors = {'Iris-setosa': 'blue', 'Iris-versicolor': 'orange', 'Iris-virginica': 'green'}
 
-# Creating figure with subplots in 2 by 2 style, setting the size of the figure (length, height).
+# Creating figure with subplots in 2 by 2 style (the four plots will be populated here), setting the size of the figure (length, height).
 # Setting the axes to a 1 dimensional array (this makes it easier to work with)
 fig, axs = plt.subplots(2, 2, figsize=(10, 6))
 axs = axs.flatten()
@@ -99,9 +100,9 @@ for i, (var, label) in enumerate(zip(columns, labels)):
     # Setting axes labels and titles
     # Combining labels with 'cm'
     axs[i].set_xlabel(label + ' (cm)')
-    # Setting the Y label for each plot
+    # Setting the Y label for each plot, this will be freuency for each plot
     axs[i].set_ylabel('Frequency')
-    # Combining Histogram of and the label
+    # Combining 'Histogram of' and the label to create a title for each plot
     axs[i].set_title('Histogram of ' + label)
 
     # Adding legend to the first subplot (0 here is the first subplot (this was defined when we enumerated the tuples))
@@ -114,7 +115,10 @@ plt.tight_layout()
 # Saving the 4 histograms figure as a PNG
 plt.savefig('histograms_of_iris_variables.png')
 
+
 ### PAIRPLOT ###
+
+
 # As opposed to creating 6 individual scatterplots I created a pairplot using seaborn.
 # As opposed to plotting histograms within this pairplot, as these have already been produced, I chose to use kernal density estimates.
 
@@ -136,6 +140,7 @@ plt.savefig('pairplots.png')
 # Measuring the correlation coefficients of each pair of variables
 
 # Excluding the class column
+# The minus 1 here is removing the last value from the columns list, that value is class
 columns_no_class = df.columns[:-1] 
 
 # Creating an empty DataFrame (this is done with pandas) to store correlation coefficients
@@ -150,12 +155,12 @@ for col1 in columns_no_class:
         correlation_df.loc[col1, col2] = correlation_coefficient
 
 # As with the other analysis above, this code will save the output as a .txt file in the repository
-# w is write mode, \n is returning a line and to_strong converts the correlation dataframe into a string which can then be written into the text file
+# "W" is write mode, \n is returning a line and to_string converts the correlation dataframe into a string which can then be written into the text file
 with open("correlation_coefficients.txt", "w") as text_file: 
     text_file.write("Correlation Coefficients:\n\n\n")
     text_file.write(correlation_df.to_string())
 
 # Printing summary of what is saved
 print("The following has been saved to the repository:\n\n summary.txt (summaries of the Iris variables).\n\n histograms_of_iris_variables (histograms for each variable).\n\n pairplots.png (pairplot of pairs of variables).\n\n correlation_coefficients.txt (correlation coefficients of each pair of variables).")
- 
+
 ### END ###
