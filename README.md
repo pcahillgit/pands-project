@@ -12,7 +12,7 @@ My repository is structured as follows:
 - This README which provides information on the Iris dataset and lists the references used to inform my work.
 - The iris.data file which contains the raw Iris data, this is imported in my code.
 - The analysis.py file which contains my code, used to analyse the dataset.
-- All other files are products of that analysis; summaries of the variables saved as a text file (summary.txt) plots (histograms and a pairplot, these are saved individually as PNG files) and some additional analysis saved as a text file (additionalanalysis.txt).
+- All other files are products of that analysis; summaries of the variables saved as a text file (summary.txt) plots (histograms and a pairplot, these are saved individually as PNG files) and some additional analysis saved as a text file (additional_analysis.txt).
 - The project.ipynb Jupyter Notebook which provides a brief written summary of the outputs of my code.
 
 ## About the Iris Dataset

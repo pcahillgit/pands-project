@@ -26,11 +26,16 @@ import seaborn as sns
 df = pd.read_csv("iris.data")
 print(df)
 
-# Naming the columns
+# Naming the variables
 columns = ['sepal length (cm)','sepal width (cm)','petal length (cm)','petal width (cm)','class']
 df.columns = columns
 
+# Defining labels for these variables
+labels = ['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width']
+
 ### VARIABLE SUMMARIES ###
+
+'''
 
 # Summarising the variables:
 # Displaying the dataframe (first five values)
@@ -51,7 +56,7 @@ print("\n\nSummary of numerical data:\n", df.describe())
 # the join function allows us to take the unique class variables as an array and convert them to a string seperated by commas.
 with open("summary.txt", "w") as text_file: 
     text_file.write("Summary of the Iris Dataset Variables:\n\n\n")
-    text_file.write("- First Five Rows of the Dataset):\n\n")
+    text_file.write("- First Five Rows of the Dataset:\n\n")
     text_file.write(df.head(5).to_string())
     text_file.write("\n\n- Types of Data:\n\n")
     text_file.write(df.dtypes.to_string())
@@ -60,121 +65,46 @@ with open("summary.txt", "w") as text_file:
     text_file.write("\n\n- Summary of Numerical Variables:\n\n")
     text_file.write(df.describe().to_string())
 
-'''  
-
-### HISTOGRAMS ###
-
-# Histograms:
-
-# Sepal Length
-# Filtering the dataset by class
-setosa_sepallength = df[df['class'] == 'Iris-setosa']['sepal length (cm)']
-versicolor_sepallength = df[df['class'] == 'Iris-versicolor']['sepal length (cm)']
-virginica_sepallength = df[df['class'] == 'Iris-virginica']['sepal length (cm)']
-
-# Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_sepallength, bins=9, color='blue', alpha=0.8, label='Setosa')
-plt.hist(versicolor_sepallength, bins=9, color='orange', alpha=0.8, label='Versicolor')
-plt.hist(virginica_sepallength, bins=9, color='green', alpha=0.8, label='Virginica')
-
-# Axis labels
-plt.xlabel('Sepal Length (cm)')
-plt.ylabel('Frequency')
-
-# Title
-plt.title('Histogram of Iris Sepal Length (by Species)')
-
-# Legend
-plt.legend()
-
-# Saving plot as a PNG
-plt.savefig('histogram of Iris Sepal Length (by Species)'.png)
-
-# Sepal Width
-# Filtering the dataset by class
-setosa_sepalwidth = df[df['class'] == 'Iris-setosa']['sepal width (cm)']
-versicolor_sepalwidth = df[df['class'] == 'Iris-versicolor']['sepal width (cm)']
-virginica_sepalwidth = df[df['class'] == 'Iris-virginica']['sepal width (cm)']
-
-# Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_sepalwidth, bins=9, color='blue', alpha=0.8, label='Setosa')
-plt.hist(versicolor_sepalwidth, bins=9, color='orange', alpha=0.8, label='Versicolor')
-plt.hist(virginica_sepalwidth, bins=9, color='green', alpha=0.8, label='Virginica')
-
-# Axis labels
-plt.xlabel('Sepal Width (cm)')
-plt.ylabel('Frequency')
-
-# Title
-plt.title('Histogram of Iris Sepal Width (by Species)')
-
-# Legend
-plt.legend()
-
-# Saving plot as a PNG
-plt.savefig('histogram of Iris Sepal Width (by Species)'.png)
-
-# Petal Length
-# Filtering the dataset by class
-setosa_petallength = df[df['class'] == 'Iris-setosa']['petal length (cm)']
-versicolor_petallength = df[df['class'] == 'Iris-versicolor']['petal length (cm)']
-virginica_petallength = df[df['class'] == 'Iris-virginica']['petal length (cm)']
-
-# Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_petallength, bins=9, color='blue', alpha=0.8, label='Setosa')
-plt.hist(versicolor_petallength, bins=9, color='orange', alpha=0.8, label='Versicolor')
-plt.hist(virginica_petallength, bins=9, color='green', alpha=0.8, label='Virginica')
-
-# Axis labels
-plt.xlabel('Petal Length (cm)')
-plt.ylabel('Frequency')
-
-# Title
-plt.title('Histogram of Iris Petal Length (by Species)')
-
-# Legend
-plt.legend()
-
-# Saving plot as a PNG
-plt.savefig('histogram of Iris Petal Length (by Species).png')
-
-# Petal Width
-# Filtering the dataset by class
-setosa_petalwidth = df[df['class'] == 'Iris-setosa']['petal width (cm)']
-versicolor_petalwidth = df[df['class'] == 'Iris-versicolor']['petal width (cm)']
-virginica_petalwidth = df[df['class'] == 'Iris-virginica']['petal width (cm)']
-
-# Plotting the three species individually on one plot, distinguishing by colour, labelling and adding a light transparency (alpha)
-plt.hist(setosa_petalwidth, bins=9, color='blue', alpha=0.8, label='Setosa')
-plt.hist(versicolor_petalwidth, bins=9, color='orange', alpha=0.8, label='Versicolor')
-plt.hist(virginica_petalwidth, bins=9, color='green', alpha=0.8, label='Virginica')
-
-# Axis labels
-plt.xlabel('Petal Width (cm)')
-plt.ylabel('Frequency')
-
-# Title
-plt.title('Histogram of Iris Petal Width (by Species)')
-
-# Legend
-plt.legend()
-
-# Saving plot as a PNG
-plt.savefig('histogram of Iris Petal Width (by Species).png')
-
-### PAIRPLOT ###
-
-# As opposed to creating 6 individual scatterplots I created a pairplot using seaborn.
-# As opposed to plotting histograms within this pairplot, as these have already been produced, I chose to use kernal density estimates.
-
-# Creating the pairplot using the dataframe, setting the diagonal boxes as kernal density estimates,
-# highlighting species by setting hue as class, coloring the classes in easy to distinguish palette.
-sns.pairplot(df, diag_kind = 'kde', hue = 'class', palette = 'colorblind')
-
-# Saving the figure as a PNG
-plt.savefig('pairplots.png')
-
 '''
+### HISTOGRAMS ### 
+
+# Histograms
+# Defining unifrom colour scheme for each species
+colors = {'Iris-setosa': 'blue', 'Iris-versicolor': 'orange', 'Iris-virginica': 'green'}
+
+# Creating figure with subplots in 2 by 2 style, setting the size of the figure (length, height).
+# Setting the axes to a 1 dimensional array (makes it easier to work with)
+fig, axs = plt.subplots(2, 2, figsize=(10, 6))
+axs = axs.flatten()
+
+# Making a loop and looping through each variable
+# var = variable, label = it's respective label
+# Zip pairs these variables and labels together as tuples
+# Enumerate indexes these tuples
+for i, (var, label) in enumerate(zip(columns, labels)):
+    # Plotting, distinguishing by colour, setting number of bins, labelling and adding transparency (alpha)
+    for species, color in colors.items():
+        data = df[df['class'] == species][var]
+        axs[i].hist(data, bins=9, color=color, alpha=0.8, label=species)
+
+    # Setting axes labels and titles
+    # Combining labels with 'cm'
+    axs[i].set_xlabel(label + ' (cm)')
+    # Setting the Y label for each plot
+    axs[i].set_ylabel('Frequency')
+    # Combining Histogram of and the label
+    axs[i].set_title('Histogram of ' + label)
+
+    # Adding legend to the first subplot (0 here is the first subplot (this was defined when we enumerated the tuples))
+    if i == 0:
+        axs[i].legend()
+
+# Adjusting the padding between and around subplots.
+plt.tight_layout()
+
+# Saving the 4 histograms figure as a PNG
+plt.savefig('histograms_of_iris_variables.png')
+
 '''
 
 ### ADDITIONAL ANALYSIS ###
