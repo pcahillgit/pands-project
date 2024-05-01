@@ -11,9 +11,11 @@ My repository is structured as follows:
 
 - This README which provides information on the Iris dataset and lists the references used to inform my work.
 - The iris.data file which contains the raw Iris data, this is imported in my code.
-- The analysis.py file which contains my code, used to analyse the dataset.
-- All other files are products of that analysis; summaries of the variables saved as a text file (summary.txt) plots (histograms and a pairplot, these are saved individually as PNG files) and some additional analysis saved as a text file (additional_analysis.txt).
 - The project.ipynb Jupyter Notebook which provides a brief written summary of the outputs of my code.
+- The analysis.py file which contains my code, used to analyse the dataset. All other files are products of that analysis:
+- summaries of the variables saved as a text file (summary.txt)
+- plots (histograms (histograms_of_iris_variables.png) and a pairplot of each pair of variables (pairplots.png))
+- and some additional analysis into the correlation coefficients of each pair of variables saved as a text file (correlation_coefficient.txt).
 
 ## About the Iris Dataset
 The Iris Dataset is taken from Ronald Fisher's 1936 paper *The Use of Multiple Measurements in Taxonomic Problems*. The study is an example of taxonomy, or the classification of living things. In the paper, Fisher outlines the physical attributes of 150 flowers, comprised of three related Iris species (fifty instances of each).
