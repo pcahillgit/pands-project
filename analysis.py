@@ -6,7 +6,7 @@
 # then I produce some summary statistics (first rows of the dataframe, types, unique classes, numerical data summaries). When run this will save a .txt file with results
 # followed by plots: histograms (one for each variable), then a pairplot of the pairs of variables. When run this will save two PNG files with figures.
 # I then finish with some additional analysis (examining the correlation coefficient of the pairs of variables). When run this will save a .txt file with results.
-# The outputs of this code are saved in the repository.
+# The outputs of this code are saved in the repository and a summary of what is saved will be printed.
 
 
 ### LIBRARIES ###
@@ -33,7 +33,6 @@ import pandas as pd
 
 # Importing the dataset
 df = pd.read_csv("iris.data")
-print(df)
 
 # Naming the variables
 columns = ['sepal length (cm)','sepal width (cm)','petal length (cm)','petal width (cm)','class']
@@ -156,5 +155,7 @@ with open("correlation_coefficients.txt", "w") as text_file:
     text_file.write("Correlation Coefficients:\n\n\n")
     text_file.write(correlation_df.to_string())
 
-
+# Printing summary of what is saved
+print("The following has been saved to the repository:\n\n summary.txt (summaries of the Iris variables).\n\n histograms_of_iris_variables (histograms for each variable).\n\n pairplots.png (pairplot of pairs of variables).\n\n correlation_coefficients.txt (correlation coefficients of each pair of variables).")
+ 
 ### END ###
