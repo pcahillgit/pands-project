@@ -54,6 +54,7 @@ Anaconda will pre-install Python along with the libraries used within this noteb
 | Seaborn | [*seaborn.kdeplot*](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) | Kernal density estimations with seaborn, explanations and guides. |
 | Seaborn | [*seaborn.pairplot*](https://seaborn.pydata.org/generated/seaborn.pairplot.html) | Pairplots with seaborn, how to edit the various parameters of the plot |
 | Solomon, Brad. Real Python | [*Python Plotting with Matplotlib (Guide)*](https://realpython.com/python-matplotlib-guide/) | Lots of useful information on plotting, additional resources are available at the end of the article. |
+| Stack Overflow | [*Stcak Overflow*](https://stackoverflow.com/) | Used for finding similar issues and their solutions. As the Iris dataset is so widespread, there are plenty of threads discussing how to analyse it such as [*this*](https://stackoverflow.com/questions/67300148/best-fit-to-a-histogramplot-iris) one I read about plotting the histograms. |
 | Van Gogh, Vincent | [*Ireses*](https://commons.wikimedia.org/wiki/File:VanGoghIrises2.jpg) | Cover image for README souced from Wikimedia Commons. Vincent Van Gogh's 1889 painting *Ireses*. |
 | W3 Schools | [*Python String join() Method*](https://www.w3schools.com/python/ref_string_join.asp) | joining items in an iterable as strings with seperators. |
 | W3 Schools | [*Matplotlib Tutorials*](https://www.w3schools.com/python/matplotlib_intro.asp) | Another useful one for plotting. I used this to see how I could enhance my plots visually by adding titles, legends, etc. |

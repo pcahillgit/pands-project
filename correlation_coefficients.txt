@@ -1,0 +1,8 @@
+Correlation Coefficients:
+
+
+                  sepal length (cm) sepal width (cm) petal length (cm) petal width (cm)
+sepal length (cm)               1.0        -0.103784          0.871283         0.816971
+sepal width (cm)          -0.103784              1.0         -0.415218        -0.350733
+petal length (cm)          0.871283        -0.415218               1.0         0.962314
+petal width (cm)           0.816971        -0.350733          0.962314              1.0
